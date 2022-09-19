@@ -1,4 +1,4 @@
-package com.seif.composeinstagramui.ui.components
+package com.seif.composeinstagramui.ui.profile.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border

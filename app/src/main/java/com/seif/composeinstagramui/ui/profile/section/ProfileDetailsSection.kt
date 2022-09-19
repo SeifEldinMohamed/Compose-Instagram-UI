@@ -1,4 +1,4 @@
-package com.seif.composeinstagramui.ui.components
+package com.seif.composeinstagramui.ui.profile
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Text
@@ -10,6 +10,7 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.seif.composeinstagramui.ui.profile.components.RoundImage
 
 @Composable
 fun ProfileDetailsSection(

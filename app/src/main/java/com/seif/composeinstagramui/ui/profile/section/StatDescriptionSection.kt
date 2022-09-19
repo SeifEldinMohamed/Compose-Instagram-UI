@@ -1,4 +1,4 @@
-package com.seif.composeinstagramui.ui.components
+package com.seif.composeinstagramui.ui.profile.section
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth

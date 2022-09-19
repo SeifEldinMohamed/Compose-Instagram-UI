@@ -1,4 +1,4 @@
-package com.seif.composeinstagramui.ui.components
+package com.seif.composeinstagramui.ui.profile.section
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
