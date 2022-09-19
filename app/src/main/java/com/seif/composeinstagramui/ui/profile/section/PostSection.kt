@@ -9,6 +9,7 @@ import androidx.compose.foundation.lazy.GridCells
 import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.scale
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -18,7 +19,7 @@ import com.seif.composeinstagramui.ui.models.Post
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun PostSection(posts: List<Post>, modifier: Modifier = Modifier) {
-    LazyVerticalGrid(cells = GridCells.Fixed(3), modifier = modifier.fillMaxSize()) {
+    LazyVerticalGrid(cells = GridCells.Fixed(3), modifier = modifier.scale(1.01f)) {
         items(posts.size) {
             Image(
                 painter = painterResource(id = posts[it].image),

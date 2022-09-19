@@ -35,12 +35,12 @@ fun TopBarSection(title: String, modifier: Modifier) {
         Icon(
             painter = painterResource(id = R.drawable.ic_bell),
             contentDescription = "bell",
-            modifier = Modifier.size(24.dp)
+            modifier = Modifier.size(20.dp)
         )
         Icon(
             painter = painterResource(id = R.drawable.ic_dotmenu),
             contentDescription = "dot menu",
-            modifier = Modifier.size(24.dp)
+            modifier = Modifier.size(20.dp)
         )
     }
 }

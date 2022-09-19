@@ -40,11 +40,11 @@ fun ProfileScreen(
 
 fun createStatDescription(): StatDescription  {
     return StatDescription(
-        displayName = "Programming Mentor",
-        description = "10 years of coding experience\n" +
+        displayName = "Android Software Engineer",
+        description = "3 years of coding experience\n" +
                 "Want me to make your app? Send me an email!\n" +
-                "Subscribe to my YouTube channel!",
-        url = "https://youtube.com/c/PhilippLackner",
+                "See my apps on Google Play!",
+        url = "https://play.google.com/store/apps/dev?id=8697500693164992079&hl=ar&gl=US",
         followedBy = listOf(
             "Hazem_Khaled",
             "Google",
