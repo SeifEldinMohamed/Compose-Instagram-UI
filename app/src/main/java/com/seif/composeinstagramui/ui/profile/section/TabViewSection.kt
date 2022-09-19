@@ -12,7 +12,7 @@ import com.seif.composeinstagramui.ui.models.Post
 import com.seif.composeinstagramui.ui.profile.components.PostTabView
 
 @Composable
-fun TabViewSection(modifier: Modifier = Modifier) {
+fun TabViewSection() {
     var selectedTabIndex by remember {
         mutableStateOf(0)
     }

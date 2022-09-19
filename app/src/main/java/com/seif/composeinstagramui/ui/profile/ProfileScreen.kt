@@ -3,24 +3,24 @@ package com.seif.composeinstagramui.ui.profile
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.seif.composeinstagramui.*
 import com.seif.composeinstagramui.R
 import com.seif.composeinstagramui.ui.models.HighLight
-import com.seif.composeinstagramui.ui.models.Post
+import com.seif.composeinstagramui.ui.models.StatDescription
 import com.seif.composeinstagramui.ui.profile.section.*
 
 @Composable
 fun ProfileScreen(
     modifier: Modifier = Modifier,
-    accountName: String,
-    userImage: Painter,
-    postsNumber: String,
-    followers: String,
-    following: String,
-    statDescription: StatDescription
 ) {
+    val accountName = "Seif_Mohamed"
+    val userImage = painterResource(id = R.drawable.seif_crop)
+    val postsNumber = "100"
+    val followers = "99.8K"
+    val following = "75"
+    val statDescription = createStatDescription()
+
     Column(modifier = modifier.fillMaxSize()) {
         Spacer(modifier = Modifier.height(12.dp))
         TopBarSection(accountName, modifier)
@@ -38,6 +38,27 @@ fun ProfileScreen(
 
 }
 
+fun createStatDescription(): StatDescription  {
+    return StatDescription(
+        displayName = "Programming Mentor",
+        description = "10 years of coding experience\n" +
+                "Want me to make your app? Send me an email!\n" +
+                "Subscribe to my YouTube channel!",
+        url = "https://youtube.com/c/PhilippLackner",
+        followedBy = listOf(
+            "Hazem_Khaled",
+            "Google",
+            "mohamed",
+            "ahmed",
+            "kareem",
+            "nora",
+            "zamalek",
+            "heba",
+            "gogo",
+            "youssef"
+        )
+    )
+}
 
 
 private fun createHighLightList(): List<HighLight> {

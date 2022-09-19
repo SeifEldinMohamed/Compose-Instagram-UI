@@ -12,7 +12,7 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.seif.composeinstagramui.StatDescription
+import com.seif.composeinstagramui.ui.models.StatDescription
 
 @Composable
 fun StatDescriptionSection(statDescription: StatDescription, modifier: Modifier = Modifier) {

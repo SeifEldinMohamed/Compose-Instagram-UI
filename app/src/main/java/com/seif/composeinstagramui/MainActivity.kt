@@ -7,7 +7,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.seif.composeinstagramui.ui.profile.ProfileScreen
 import com.seif.composeinstagramui.ui.theme.ComposeInstagramUiTheme
@@ -23,40 +22,13 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colors.background
                 ) {
                     Column(modifier = Modifier.fillMaxSize()) {
-                        ProfileScreen(
-                            accountName = "Seif_Mohamed",
-                            userImage = painterResource(id = R.drawable.seif_crop),
-                            postsNumber = "100",
-                            followers = "99.8K",
-                            following = "75",
-                            statDescription = StatDescription(
-                                displayName = "Programming Mentor",
-                                description = "10 years of coding experience\n" +
-                                        "Want me to make your app? Send me an email!\n" +
-                                        "Subscribe to my YouTube channel!",
-                                url = "https://youtube.com/c/PhilippLackner",
-                                followedBy = listOf(
-                                    "Hazem_Khaled",
-                                    "Google",
-                                    "mohamed",
-                                    "ahmed",
-                                    "kareem",
-                                    "nora",
-                                    "zamalek",
-                                    "heba",
-                                    "gogo",
-                                    "youssef"
-                                )
-                            )
-                        )
+                        ProfileScreen()
                     }
                 }
             }
         }
     }
 }
-
-
 
 @Preview(showBackground = true)
 @Composable
@@ -67,40 +39,8 @@ fun DefaultPreview() {
             color = MaterialTheme.colors.background
         ) {
             Column(modifier = Modifier.fillMaxSize()) {
-                ProfileScreen(
-                    accountName = "Seif_Mohamed",
-                    userImage = painterResource(id = R.drawable.seif_crop),
-                    postsNumber = "100",
-                    followers = "99.8K",
-                    following = "75",
-                    statDescription = StatDescription(
-                        displayName = "Programming Mentor",
-                        description = "10 years of coding experience\n" +
-                                "Want me to make your app? Send me an email!\n" +
-                                "Subscribe to my YouTube channel!",
-                        url = "https://youtube.com/c/PhilippLackner",
-                        followedBy = listOf(
-                            "Hazem_Khaled",
-                            "Google",
-                            "mohamed",
-                            "ahmed",
-                            "kareem",
-                            "nora",
-                            "zamalek",
-                            "heba",
-                            "gogo",
-                            "youssef"
-                        )
-                    )
-                )
+                ProfileScreen()
             }
         }
     }
 }
-
-data class StatDescription(
-    val displayName: String,
-    val description: String,
-    val url: String,
-    val followedBy: List<String>,
-)
