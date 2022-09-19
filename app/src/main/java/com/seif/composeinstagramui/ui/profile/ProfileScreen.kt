@@ -7,11 +7,9 @@ import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.unit.dp
 import com.seif.composeinstagramui.*
 import com.seif.composeinstagramui.R
-import com.seif.composeinstagramui.ui.profile.section.HighLightsSection
 import com.seif.composeinstagramui.ui.models.HighLight
-import com.seif.composeinstagramui.ui.profile.section.ButtonsSection
-import com.seif.composeinstagramui.ui.profile.section.StatDescriptionSection
-import com.seif.composeinstagramui.ui.profile.section.TopBarSection
+import com.seif.composeinstagramui.ui.models.Post
+import com.seif.composeinstagramui.ui.profile.section.*
 
 @Composable
 fun ProfileScreen(
@@ -26,7 +24,7 @@ fun ProfileScreen(
     Column(modifier = modifier.fillMaxSize()) {
         Spacer(modifier = Modifier.height(12.dp))
         TopBarSection(accountName, modifier)
-        Spacer(modifier = Modifier.height(12.dp))
+        Spacer(modifier = Modifier.height(10.dp))
         ProfileDetailsSection(userImage, postsNumber, followers, following)
         Spacer(modifier = Modifier.height(8.dp))
         StatDescriptionSection(statDescription)
@@ -34,9 +32,13 @@ fun ProfileScreen(
         ButtonsSection()
         Spacer(modifier = Modifier.height(12.dp))
         HighLightsSection(createHighLightList(), modifier.padding(start = 10.dp))
+        Spacer(modifier = Modifier.height(8.dp))
+        TabViewSection()
     }
 
 }
+
+
 
 private fun createHighLightList(): List<HighLight> {
     return listOf(
